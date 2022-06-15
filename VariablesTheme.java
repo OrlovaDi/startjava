@@ -9,13 +9,14 @@ public class VariablesTheme {
         double memoryC = 232.0;
         char char1 = 'o';
         boolean worksPC = true;
-        System.out.println(nucleus + "\n" + systemType + "\n" + cpu + "\n" + memoryD + "\n" + ram + "\n" + memoryC + "\n" + char1 + "\n" + worksPC);
+        System.out.println(nucleus + "\n" + systemType + "\n" + cpu + "\n" + memoryD);
+        System.out.println(ram + "\n" + memoryC + "\n" + char1 + "\n" + worksPC);
 
         System.out.println("\n2.Расчет стоимости товара со скидкой");
         int x = 100;
         int y = 200;
         double sale = 11;
-        System.out.println((int)sale + "%");
+        System.out.println((int) sale + "%");
         System.out.println((x + y) - ((x + y) * 11 / 100));
 
         System.out.println("\n3.Вывод на консоль слова JAVA");
@@ -43,14 +44,21 @@ public class VariablesTheme {
         number2 = temp;
         System.out.println("с помощью третьей переменной" + " " + number1 + " " + number2);
         System.out.println("с помощью арифметических операций" + " " + number1 + " " + number2);
+        number1 = number2 + number1;
+        number2 = number1 - number2;
         number1 = number1 - number2;
-        number2 = number2 + number2;
         System.out.println("с помощью арифметических операций" + " " + number1 + " " + number2);
         System.out.println("с помощью побитовой операции" + " " + number1 + " " + number2);
-        int value3 = (int) (number2 * 10) ^ (int) (number1 * 10) ;
-        number1 = value3 ^ (int) (number1 * 10);
-        number2 = value3 ^ (int) (number2 * 10);
-        System.out.println("с помощью побитовой операции" + " " + ((number1 / 10) + " " + (number2 / 10)));
+        number1 *= 10;
+        number2 *= 10;
+        int num1 = (int) number1;
+        int num2 = (int) number2;
+        num1 ^= num2;
+        num2 = num1 ^ num2;
+        num1 ^= num2;
+        number1 = (double) num1 / 10;
+        number2 = (double) num2 / 10;
+        System.out.println("с помощью побитовой операции " + number1 + " " + number2);
 
         System.out.println("\n6.Вывод символов и их кодов");
         int symbol1 = 35;
@@ -58,11 +66,11 @@ public class VariablesTheme {
         int symbol3 = 64;
         int symbol4 = 94;
         int symbol5 = 95;
-        System.out.println(symbol1 + " " + (char)symbol1);
-        System.out.println(symbol2 + " " + (char)symbol2);
-        System.out.println(symbol3 + " " + (char)symbol3);
-        System.out.println(symbol4 + " " + (char)symbol4);
-        System.out.println(symbol5 + " " + (char)symbol5);
+        System.out.println(symbol1 + " " + (char) symbol1);
+        System.out.println(symbol2 + " " + (char) symbol2);
+        System.out.println(symbol3 + " " + (char) symbol3);
+        System.out.println(symbol4 + " " + (char) symbol4);
+        System.out.println(symbol5 + " " + (char) symbol5);
 
         System.out.println("\n7.Произведение и сумма цифр числа");
         int number = 345;
@@ -86,14 +94,15 @@ public class VariablesTheme {
 
         System.out.println("\n9.Отображение количества сотен, десятков и единиц числа");
         number = 123;
-        System.out.println("Число " + number + " содержит:\n" + (number / 100) + " сотен\n" + ((number / 10) % 10) + " десятков\n" + (number % 10) + " единиц");
+        System.out.println("Число " + number + " содержит:\n" + (number / 100) + " сотен");
+        System.out.println(((number / 10) % 10) + " десятков\n" + (number % 10) + " единиц");
 
         System.out.println("\n10.Преобразование секунд");
         number = 86399;
-        double hour = (number / 60 / 60);
-        double minutes = (number / 60) % 60;
-        double seconds = minutes % 60;
+        int hour = (number / 3600);
+        int minutes = (number / 60) % 60;
+        int seconds = minutes % 60;
 
-        System.out.println((int)hour + ":" + (int)minutes + ":" + (int)seconds);
+        System.out.println(hour + ":" + minutes + ":" + seconds);
     }
 }
