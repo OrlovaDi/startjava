@@ -118,11 +118,11 @@ public class IfElseStatementTheme {
         }
 
         System.out.println("\n6.Определение суммы вклада и начисленных банком %");
-        int contribution = 100_000;
+        int contribution = 300_000;
         int percentContribution;
         int sum;
         System.out.println("Сумма вклада : " + contribution);
-        if (contribution < 300_000) {
+        if (contribution < 100_000) {
             percentContribution = 5;
             sum = contribution * percentContribution / 100 + contribution;
 
