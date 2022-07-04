@@ -2,23 +2,29 @@ public class IfElseStatementTheme {
     public static void main(String[] args) {
         System.out.println("1.Перевод псевдокода на язык Java");
         int age = 18;
-        boolean isMen = false;
-        double height = 1.65;
-        char firstLetter = "Diana".charAt(0);
 
         if (age > 20) {
             System.out.println("Вы можете войти");
         } else {
             System.out.println("Вход возможен только при достижении 20 лет");
         }
+
+        boolean isMen = false;
+
         if (!isMen) {
             System.out.println("Вход только для мужчин");
         }
+
+        double height = 1.65;
+
         if (height < 1.80) {
             System.out.println("Добро пожаловать на аттракцион");
         } else {
             System.out.println("Это атракцион вам не подходит");
         }
+
+        char firstLetter = "Diana".charAt(0);
+
         if (firstLetter == 'M') {
             System.out.println("Ваше имя начинается на букву \"М\"");
         } else if (firstLetter == 'I') {
@@ -62,6 +68,7 @@ public class IfElseStatementTheme {
         int unitNumber2 = number2 / 100;
         int dozensNumber2 = (number2 / 10) % 10;
         int hundredNumber2 = number2 % 10;
+
         if (unitNumber1 == unitNumber2 || dozensNumber1 == dozensNumber2 || hundredNumber1 == hundredNumber2) {
             if (unitNumber1 == unitNumber2) {
                 System.out.print("В числах " + number1 + " и " + number2 + " одинаковые цифры " + unitNumber1);
@@ -99,40 +106,36 @@ public class IfElseStatementTheme {
 
         System.out.println("\n5.Определение буквы, числа или символа по их коду");
         char symbol = '\u0057';
-        System.out.println(symbol);
+        System.out.print(symbol + " - ");
         if (symbol >= 'A' && symbol <= 'Z') {
-            System.out.println("Это большая буква");
+            System.out.println("это большая буква");
         } else if (symbol >= 'a' && symbol <='z') {
-            System.out.println("Это маленькая буква");
-        }else if (symbol >= '0') {
-            System.out.println("Это число");
+            System.out.println("это маленькая буква");
+        } else if (symbol >= '0') {
+            System.out.println("это число");
         } else {
-            System.out.println("Это не буква и не число");
+            System.out.println("это не буква и не число");
         }
 
         System.out.println("\n6.Определение суммы вклада и начисленных банком %");
-        int contribution = 300_000;
+        int contribution = 100_000;
         int percentContribution;
         int sum;
         System.out.println("Сумма вклада : " + contribution);
-        if (contribution < 100_000) {
+        if (contribution < 300_000) {
             percentContribution = 5;
             sum = contribution * percentContribution / 100 + contribution;
-            System.out.println("Начисленный процент: " + percentContribution + "%");
-            System.out.println("Итоговая сумма с процентами: " + sum);
 
         } else if (contribution >= 100_00 && contribution < 300_000) {
             percentContribution = 7;
             sum = contribution * percentContribution / 100 + contribution;
-            System.out.println("Начисленный процент: " + percentContribution + "%");
-            System.out.println("Итоговая сумма с процентами: " + sum);
 
         } else {
             percentContribution = 10;
             sum = contribution * percentContribution / 100 + contribution;
-            System.out.println("Начисленный процент: " + percentContribution + "%");
-            System.out.println("Итоговая сумма с процентами: " + sum);
         }
+        System.out.println("Начисленный процент: " + percentContribution + "%");
+        System.out.println("Итоговая сумма с процентами: " + sum);
 
         System.out.println("\n7.Определение оценки по предметам");
         int historyPercent = 59;
@@ -204,9 +207,5 @@ public class IfElseStatementTheme {
             System.out.println("Номиналы банкнот: " + unit + ", " + dozens + ", " + hundred);
             System.out.println("Требуемое количество банкнот: " + numberOfTen + " купюр по " + hundred + ", " + numberOfDozens + " купюр по " + dozens + ", " + numberOfUnit +" купюр по " + unit);
             System.out.println("Исходная сумма: " + reverseSettlement + " USD");
-
-
-
-
     }
 }
